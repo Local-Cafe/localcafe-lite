@@ -348,7 +348,7 @@ We welcome contributions! This project aims to support independent restaurants a
 
 ## License
 
-[Your License Here]
+MIT
 
 ## Support
 

@@ -16,6 +16,17 @@
 
 Pasta boy's started in ma's kitchen after a plate of ma's spaggite in old town meatball. 20 years later they are still slerping noddles.
 
+
 ## Orders to GO
 
 We do orders to go, call us and place an order for pick up
+
+## This was an exmaple of using localcafe lite
+
+You can use localcafe lite for free and also host static restaurant menu sites for free using github pages.
+
+Learn more about this project at [https://github.com/Local-Cafe/localcafe-lite](https://github.com/Local-Cafe/localcafe-lite)
+
+## Disclaimer
+
+This is not a real restaurant,
