@@ -1,0 +1,35 @@
+/**
+ * Breakpoints
+ *
+ * Media query breakpoints for responsive design.
+ *
+ * IMPORTANT: CSS media queries cannot use CSS custom properties.
+ * These values are documented here as the single source of truth.
+ * When writing media queries, use these exact pixel values.
+ *
+ * Standard Breakpoints:
+ * - sm:  640px  (small tablets and up)
+ * - md:  768px  (tablets and up)
+ * - lg:  1024px (laptops and up)
+ * - xl:  1280px (desktops and up)
+ * - 2xl: 1536px (large desktops and up)
+ *
+ * Usage in component CSS:
+ *   @media (min-width: 640px) { ... }  // sm and up
+ *   @media (min-width: 768px) { ... }  // md and up
+ *   @media (min-width: 1024px) { ... } // lg and up
+ *   @media (max-width: 639px) { ... }  // below sm
+ *   @media (max-width: 767px) { ... }  // below md
+ *   @media (max-width: 1023px) { ... } // below lg
+ */
+
+@layer tokens {
+    :root {
+        /* Breakpoint values for reference in calculations */
+        --breakpoint-sm: 640px;
+        --breakpoint-md: 768px;
+        --breakpoint-lg: 1024px;
+        --breakpoint-xl: 1280px;
+        --breakpoint-2xl: 1536px;
+    }
+}

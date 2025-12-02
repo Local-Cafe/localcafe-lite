@@ -1,0 +1,40 @@
+/**
+ * Animation Utilities
+ *
+ * Reusable animation and transition classes.
+ */
+
+@layer utilities {
+    /* JS show/hide transitions */
+    .transition-show {
+        transition:
+            opacity var(--transition-base),
+            transform var(--transition-base);
+    }
+
+    .transition-show-from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    .transition-show-to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .transition-hide {
+        transition:
+            opacity var(--transition-fast),
+            transform var(--transition-fast);
+    }
+
+    .transition-hide-from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .transition-hide-to {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}

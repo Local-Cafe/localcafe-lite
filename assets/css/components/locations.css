@@ -1,0 +1,125 @@
+@layer components {
+  .locations-grid {
+    display: grid;
+    gap: var(--space-8);
+    padding: var(--space-8) var(--space-4);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Single location: full width */
+  .locations-grid:has(.location-card:only-child) {
+    grid-template-columns: 1fr;
+  }
+
+  /* Multiple locations: responsive grid */
+  .locations-grid:has(.location-card:nth-child(2)) {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
+  }
+
+  .location-card {
+    background-color: var(--color-surface-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+  }
+
+  .location-name {
+    font-size: var(--text-xl);
+    font-weight: var(--font-semibold);
+    color: var(--color-text-primary);
+    margin: 0 0 var(--space-4) 0;
+  }
+
+  .location-description {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0 0 var(--space-6) 0;
+  }
+
+  .location-content {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  /* Two-column layout on larger screens when map exists */
+  @media (min-width: 768px) {
+    .location-content:has(.location-map) {
+      grid-template-columns: auto 1fr;
+    }
+  }
+
+  .location-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .location-section h4 {
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 var(--space-2) 0;
+  }
+
+  .location-section p {
+    font-size: var(--text-base);
+    color: var(--color-text-primary);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .location-section p + p {
+    margin-top: var(--space-1);
+  }
+
+  .location-map {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    min-height: 400px;
+  }
+
+  @media (max-width: 767px) {
+    .locations-grid {
+      padding: 0;
+      gap: var(--space-3);
+    }
+
+    .location-card {
+      padding: var(--space-3);
+      border-radius: 0;
+    }
+
+    .location-name {
+      margin: 0 0 var(--space-2) 0;
+    }
+
+    .location-description {
+      margin: 0 0 var(--space-3) 0;
+    }
+
+    .location-content {
+      gap: var(--space-3);
+    }
+
+    .location-info {
+      gap: var(--space-4);
+    }
+
+    .location-section {
+      padding-bottom: var(--space-2);
+    }
+
+    .location-map {
+      min-height: 300px;
+    }
+  }
+
+  .location-map iframe {
+    display: block;
+  }
+}

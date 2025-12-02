@@ -1,0 +1,14 @@
+/**
+ * CSS Cascade Layers
+ *
+ * Defines the layer order for the cascade. Layers listed first have lower priority.
+ * This ensures that component styles can override base styles, and utilities can
+ * override components when needed.
+ */
+
+@layer reset,
+  tokens,
+  base,
+  utilities,
+  components,
+  overrides;

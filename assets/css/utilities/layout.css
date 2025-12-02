@@ -1,0 +1,131 @@
+/**
+ * Layout Utilities
+ *
+ * Reusable layout patterns. These are meant to be composed into semantic
+ * components using CSS nesting, not applied directly to HTML.
+ *
+ * Example usage in a component:
+ *   .my-component {
+ *     & {
+ *       @extend .stack-md;  // If your build system supports @extend
+ *     }
+ *     // Or manually include the properties you need
+ *   }
+ */
+
+@layer utilities {
+    /* Page Container - standard 1400px max-width */
+    .\:page-container {
+        max-width: var(--container-2xl); /* 1400px */
+        margin: auto;
+    }
+
+    /* Legacy container - centers content with max-width */
+    .\:container {
+        width: 100%;
+        max-width: var(--container-xl);
+        margin-inline: auto;
+        padding-inline: var(--space-4);
+
+        @media (min-width: 640px) {
+            padding-inline: var(--space-6);
+        }
+
+        @media (min-width: 1024px) {
+            padding-inline: var(--space-8);
+        }
+    }
+
+    /* Stack - vertical spacing between children */
+    .\:stack {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .\:stack-xs > * + * {
+        margin-top: var(--space-xs);
+    }
+    .\:stack-sm > * + * {
+        margin-top: var(--space-sm);
+    }
+    .\:stack-md > * + * {
+        margin-top: var(--space-md);
+    }
+    .\:stack-lg > * + * {
+        margin-top: var(--space-lg);
+    }
+    .\:stack-xl > * + * {
+        margin-top: var(--space-xl);
+    }
+
+    /* Cluster - horizontal spacing between children */
+    .\:cluster {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-md);
+        align-items: center;
+    }
+
+    .\:cluster-xs {
+        gap: var(--space-xs);
+    }
+    .\:cluster-sm {
+        gap: var(--space-sm);
+    }
+    .\:cluster-md {
+        gap: var(--space-md);
+    }
+    .\:cluster-lg {
+        gap: var(--space-lg);
+    }
+    .\:cluster-xl {
+        gap: var(--space-xl);
+    }
+
+    /* Grid - responsive grid layout */
+    .\:grid {
+        display: grid;
+        gap: var(--space-md);
+    }
+
+    .\:grid-2 {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    }
+
+    .\:grid-3 {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    }
+
+    .\:grid-4 {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+    }
+
+    /* Split - space-between layout */
+    .\:split {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--space-md);
+    }
+
+    /* Center - center content */
+    .\:center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Visually hidden but accessible to screen readers */
+    .\:sr-only,
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+}

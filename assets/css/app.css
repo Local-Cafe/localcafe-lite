@@ -1,0 +1,44 @@
+/**
+ * LocalCafe App CSS
+ *
+ * Modern CSS architecture with layers, design tokens, and semantic composition.
+ * Lightning CSS processes this with autoprefixing, nesting, and modern CSS support.
+ *
+ * Architecture inspired by Kelp UI but adapted for semantic class composition
+ * rather than utility-first HTML markup.
+ *
+ * Layer order (lowest to highest specificity):
+ *   1. reset     - CSS reset
+ *   2. tokens    - Design system variables
+ *   3. base      - Base HTML element styles
+ *   4. utilities - Reusable patterns for composition
+ *   5. components - Semantic component styles
+ *   6. overrides - Project-specific overrides
+ */
+
+/* Define cascade layers (must be first) */
+@import "./layers.css";
+
+/* Design tokens */
+@import "./tokens/colors.css";
+@import "./tokens/spacing.css";
+@import "./tokens/typography.css";
+@import "./tokens/sizing.css";
+@import "./tokens/breakpoints.css";
+
+/* Reset and base styles */
+@import "./base/reset.css";
+@import "./base/elements.css";
+
+/* Utility patterns for composition */
+@import "./utilities/layout.css";
+@import "./utilities/patterns.css";
+@import "./utilities/animations.css";
+
+/* Components */
+@import "./components/navigation.css";
+@import "./components/menu-card.css";
+@import "./components/menu-item.css";
+@import "./components/buttons.css";
+@import "./components/footer.css";
+@import "./components/locations.css";

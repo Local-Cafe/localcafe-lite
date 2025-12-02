@@ -1,0 +1,62 @@
+/**
+ * Reusable Patterns
+ *
+ * Common CSS patterns that components can compose from.
+ * Prefixed with : to indicate they're for composition, not direct HTML use.
+ */
+
+@layer utilities {
+    /* Focus ring pattern */
+    .\:focus-ring:focus-visible {
+        outline-offset: var(--focus-ring-offset);
+    }
+
+    /* Interactive overlay effects */
+    .\:hover-overlay {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity var(--transition-fast) var(--transition-timing);
+            pointer-events: none;
+            border-radius: inherit;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+
+    /* Interactive state */
+    .\:interactive {
+        cursor: pointer;
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+    }
+
+    /* Truncate text */
+    .\:truncate {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .\:truncate-2 {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .\:truncate-3 {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}

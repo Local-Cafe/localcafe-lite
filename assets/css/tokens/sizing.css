@@ -1,0 +1,59 @@
+/**
+ * Sizing Tokens
+ *
+ * Border radius (none - sharp edges), shadows (offset style), and other sizing values.
+ * Inspired by fullstacking's sharp, geometric aesthetic.
+ */
+
+@layer tokens {
+    :root {
+        /* Shadows - Offset style (no blur) for graphic, sharp appearance */
+        --shadow-subtle: 2px 2px 0 var(--color-gray-800);
+        --shadow-gold: 3px 3px 0 var(--color-gold);
+        --shadow-gold-dark: 3px 3px 0 var(--color-gold-dark);
+        --shadow-cyan: 4px 4px 0 var(--color-cyan); /* CTA only */
+        --shadow-magenta: 4px 4px 0 var(--color-magenta); /* CTA only */
+
+        /* Legacy shadow aliases (maps to offset shadows) */
+        --shadow-sm: var(--shadow-subtle);
+        --shadow-md: var(--shadow-gold);
+        --shadow-lg: var(--shadow-gold-dark);
+        --shadow-xl: var(--shadow-cyan);
+
+        /* Focus ring */
+        --focus-ring-width: 2px;
+        --focus-ring-offset: 2px;
+        --focus-ring-color: var(--color-focus);
+
+        /* Borders - Thin and prominent */
+        --border-width: 1px;
+        --border-width-medium: 2px;
+        --border-width-thick: 3px;
+        --border-style: solid;
+
+        /* Transitions */
+        --transition-fast: 150ms;
+        --transition-base: 200ms;
+        --transition-slow: 300ms;
+        --transition-timing: ease; /* Simpler easing for sharp aesthetic */
+
+        /* Z-index scale */
+        --z-base: 0;
+        --z-header: 100;
+        --z-dropdown: 1000;
+        --z-sticky: 1100;
+        --z-fixed: 1200;
+        --z-modal-backdrop: 1300;
+        --z-modal: 1400;
+        --z-popover: 1500;
+        --z-tooltip: 1600;
+        --z-toast: 1500;
+
+        /* Container widths */
+        --container-sm: 640px;
+        --container-md: 768px;
+        --container-lg: 1024px;
+        --container-xl: 1280px;
+        --container-2xl: 1400px; /* Matches fullstacking max-width */
+    }
+}

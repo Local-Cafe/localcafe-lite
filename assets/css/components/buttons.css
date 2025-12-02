@@ -1,0 +1,74 @@
+/**
+ * Button Component
+ */
+
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    font-family: var(--font-base);
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+    line-height: 1;
+    padding: var(--space-3) var(--space-5);
+    border-radius: var(--radius-md);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    text-decoration: none;
+  }
+
+  .btn:focus-visible {
+    outline: var(--focus-ring-width) solid var(--color-focus);
+    outline-offset: var(--focus-ring-offset);
+  }
+
+  /* Primary button */
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border-color: var(--color-primary);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+  }
+
+  /* Secondary button */
+  .btn-secondary {
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--color-hover-bg);
+  }
+
+  /* Accent button */
+  .btn-accent {
+    background-color: var(--color-accent);
+    color: var(--color-surface);
+    border-color: var(--color-accent);
+  }
+
+  .btn-accent:hover {
+    background-color: color-mix(in oklch, var(--color-accent) 85%, var(--literal-black) 15%);
+    border-color: color-mix(in oklch, var(--color-accent) 85%, var(--literal-black) 15%);
+  }
+
+  /* Small button */
+  .btn-sm {
+    font-size: var(--text-sm);
+    padding: var(--space-2) var(--space-4);
+  }
+
+  /* Large button */
+  .btn-lg {
+    font-size: var(--text-lg);
+    padding: var(--space-4) var(--space-6);
+  }
+}

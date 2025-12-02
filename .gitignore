@@ -1,0 +1,25 @@
+# The directory Mix will write compiled artifacts to.
+/_build/
+
+# The directory Mix downloads your dependencies sources to.
+/deps/
+
+# If the VM crashes, it generates a dump, let's ignore it too.
+erl_crash.dump
+
+# Ignore assets that are produced by build tools.
+/priv/output/**/*.css
+/priv/output/**/*.js
+/priv/output/**/*.map
+
+
+/priv/output/menu/
+/priv/output/**/*.html
+
+
+# In case you use Node.js/npm, you want to ignore these.
+npm-debug.log
+
+/assets/node_modules/
+
+/.elixir_ls/

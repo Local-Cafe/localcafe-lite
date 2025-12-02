@@ -1,0 +1,150 @@
+/**
+ * Base Element Styles
+ *
+ * Applies design tokens to native HTML elements for a consistent foundation.
+ * These styles provide sensible defaults without requiring classes.
+ * Inspired by fullstacking's sharp, geometric aesthetic with gold/black theme.
+ */
+
+@layer base {
+    /* Document */
+    html {
+        font-size: 16px;
+        line-height: var(--leading-base);
+    }
+
+    body {
+        font-family: var(--font-base);
+        font-size: var(--size-step-0);
+        line-height: var(--leading-base);
+        background-color: var(--color-background);
+        color: var(--color-foreground);
+
+        /* Flexbox layout to push footer to bottom */
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* Typography - Headings use display font */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-display);
+        line-height: var(--leading-flat);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-primary);
+    }
+
+    h1 {
+        font-size: var(--size-step-6);
+        margin-bottom: var(--space-4);
+    }
+
+    h2 {
+        font-size: var(--size-step-4);
+        margin-bottom: var(--space-3);
+    }
+
+    h3 {
+        font-size: var(--size-step-3);
+        margin-bottom: var(--space-3);
+    }
+
+    h4 {
+        font-size: var(--size-step-2);
+        margin-bottom: var(--space-2);
+    }
+
+    h5 {
+        font-size: var(--size-step-1);
+        margin-bottom: var(--space-2);
+    }
+
+    h6 {
+        font-size: var(--size-step-0);
+        margin-bottom: var(--space-2);
+    }
+
+    p {
+        margin-bottom: var(--space-4);
+        line-height: var(--leading-loose);
+        color: var(--color-foreground);
+    }
+
+    /* Links */
+    a {
+        color: var(--color-primary);
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+
+        &:hover {
+            color: var(--color-primary-hover);
+        }
+
+        &:focus-visible {
+            outline-offset: var(--focus-ring-offset);
+        }
+    }
+
+    /* Code - Sharp edges, monospace */
+    code,
+    kbd,
+    samp,
+    pre {
+        font-family: var(--font-mono);
+        font-size: var(--size-step--2);
+    }
+
+    code {
+        padding: var(--space-1) var(--space-2);
+        background-color: var(--color-background-secondary);
+    }
+
+    pre code {
+        padding: 0;
+        background: none;
+        border: none;
+    }
+
+    pre {
+        padding: var(--space-4);
+        border: var(--border-width) solid var(--color-border);
+        overflow-x: auto;
+        margin-bottom: var(--space-4);
+        background-color: var(--color-background-secondary);
+    }
+
+    /* Lists */
+    ul,
+    ol {
+        padding-left: var(--space-6);
+        margin-bottom: var(--space-4);
+    }
+
+    li {
+        margin-bottom: var(--space-2);
+    }
+
+    /* Horizontal rule */
+    hr {
+        border: 0;
+        height: var(--border-width);
+        background-color: var(--color-border);
+        margin: var(--space-8) 0;
+    }
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    /* Focus styles for all interactive elements */
+    :focus-visible {
+        outline-offset: var(--focus-ring-offset);
+    }
+}

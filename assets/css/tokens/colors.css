@@ -1,0 +1,69 @@
+/**
+ * Color Tokens
+ */
+
+@layer tokens {
+    :root {
+        /* Literal color palette - OKLCH format */
+        /* These are never used directly in components, only for defining semantic colors */
+        --literal-black: oklch(0.156 0.01 92.4);
+        --literal-white: oklch(0.99 0 0);
+
+        /* Literal slate palette (Tailwind-inspired) */
+        --literal-slate-50: oklch(
+            0.984 0.003 250
+        ); /* Almost white with cool tint */
+        --literal-slate-100: oklch(0.967 0.005 250); /* Very light slate */
+        --literal-slate-200: oklch(0.929 0.008 250); /* Light slate */
+        --literal-slate-300: oklch(0.834 0.012 255); /* Medium-light slate */
+        --literal-slate-400: oklch(0.618 0.015 255); /* Medium slate */
+        --literal-slate-500: oklch(0.505 0.018 255); /* True slate */
+        --literal-slate-600: oklch(0.408 0.015 255); /* Dark slate */
+        --literal-slate-700: oklch(0.333 0.013 255); /* Darker slate */
+        --literal-slate-800: oklch(0.215 0.012 255); /* Very dark slate */
+        --literal-slate-900: oklch(0.145 0.01 255); /* Nearly black slate */
+
+        /* Literal semantic state colors - muted versions */
+        --literal-error: oklch(0.58 0.15 25); /* Muted red */
+        --literal-success: oklch(0.62 0.12 145); /* Muted green */
+        --literal-warning: oklch(0.72 0.1 70); /* Muted orange */
+
+        /* Semantic color mappings */
+        /* These are used throughout the site and reference literal colors */
+
+        /* Brand colors - subtle slate */
+        --color-primary: var(--literal-slate-700);
+        --color-primary-hover: var(--literal-slate-800);
+        --color-accent: var(--literal-slate-500);
+
+        /* Surface colors - mostly white with subtle offsets */
+        --color-background: var(--literal-white);
+        --color-surface: var(--literal-white);
+        --color-surface-secondary: var(--literal-slate-100);
+        --color-surface-tertiary: var(--literal-slate-200);
+
+        /* Text colors - slate tones */
+        --color-foreground: var(--literal-slate-900);
+        --color-text-primary: var(--literal-slate-900);
+        --color-text-secondary: var(--literal-slate-600);
+        --color-text-muted: var(--literal-slate-400);
+
+        /* Border colors - very subtle */
+        --color-border: var(--literal-slate-200);
+        --color-border-strong: var(--literal-slate-300);
+
+        /* Interactive states - minimal */
+        --color-focus: var(--literal-slate-600);
+        --color-hover-bg: var(--literal-slate-50);
+
+        /* Special accent colors */
+        --color-gold: var(--literal-warning);
+        --color-cyan: var(--literal-slate-400);
+        --color-magenta: var(--literal-slate-500);
+
+        /* Semantic state colors */
+        --color-error: var(--literal-error);
+        --color-success: var(--literal-success);
+        --color-warning: var(--literal-warning);
+    }
+}
