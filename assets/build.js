@@ -65,8 +65,14 @@ async function buildCSS() {
     const cssDir = dirname(appOutPath);
     mkdirSync(cssDir, { recursive: true });
     writeFileSync(appOutPath, appCode);
+
+    const sizeKB = (appCode.length / 1024).toFixed(1);
+    console.log(`  ../priv/output/assets/css/app.css  ${sizeKB}kb`);
+
     if (!deploy && appMap) {
       writeFileSync(appOutPath + ".map", appMap.toString());
+      const mapSizeKB = (appMap.toString().length / 1024).toFixed(1);
+      console.log(`  ../priv/output/assets/css/app.css.map  ${mapSizeKB}kb`);
     }
 
     if (watch) {
