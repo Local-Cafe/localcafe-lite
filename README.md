@@ -136,6 +136,13 @@ Ask your server about today's special!
 - Displayed above the regular menu in a highlighted section
 - Perfect for daily specials, seasonal items, or limited-time offers
 - Automatically hidden when `priv/specials/` is empty
+- "SPECIAL" badge automatically appears in corner
+
+**Dynamic layouts based on number of specials:**
+- **1 special:** Full-width horizontal layout with image on left, content on right
+- **2 specials:** Two-column layout, each special gets 50% width
+- **3+ specials:** Three-column grid layout (responsive)
+- **Mobile:** All layouts stack vertically on smaller screens
 
 ### Locations
 Create markdown files in `priv/locations/`. Coordinates fetched automatically.
