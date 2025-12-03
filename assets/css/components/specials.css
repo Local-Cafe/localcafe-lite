@@ -1,15 +1,26 @@
 @layer components {
   .specials-section {
-    padding: var(--space-8) var(--space-4);
-    max-width: var(--max-width-content);
-    margin: 0 auto;
+    scroll-margin-top: 6rem;
+  }
+
+  .specials-section .menu-section-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: var(--font-bold);
+    color: var(--color-text-primary);
+    text-align: center;
+    max-width: var(--container-xl);
+    margin: 0 auto var(--space-8);
+    padding: var(--space-8) var(--space-6) 0;
   }
 
   .specials-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
     gap: var(--space-6);
-    margin-top: var(--space-6);
+    padding: var(--space-6);
+    max-width: var(--container-xl);
+    margin-inline: auto;
   }
 
   .special-card {
